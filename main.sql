@@ -13,7 +13,7 @@ drop table if exists `person`;
 create table `person` (
     `id` integer unsigned not null auto_increment,
     `name` varchar(255) not null,
-    `contact` varchar(255) not null,
+    `contact` varchar(255),
     `created_at` datetime not null default current_timestamp,
     `updated_at` datetime on update current_timestamp,
     index (`name`),
@@ -80,9 +80,8 @@ create table `event` (
 
 create table `batch` (
     `id` integer unsigned not null auto_increment,
-    `active` tinyint(1) not null,
     `name` varchar(255) not null,
-    `price` double not null,
+    `value` double not null,
     `created_at` datetime not null default current_timestamp,
     `updated_at` datetime on update current_timestamp,
     primary key (`id`)
@@ -101,7 +100,9 @@ create table `ticket` (
     `fk_event` integer unsigned not null,
     `fk_batch` integer unsigned not null,
     `fk_person` integer unsigned not null,
-    `fk_ticket_status` integer unsigned not null,
+    `fk_ticket_status` integer unsigned not null default 1,
+    `value` double not null,
+    `notes` text,
     `created_at` datetime not null default current_timestamp,
     `updated_at` datetime on update current_timestamp,
     primary key (`id`),
