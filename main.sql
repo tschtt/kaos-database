@@ -120,6 +120,18 @@ values
     (2, 'blocked'),
     (3, 'used');
 
+insert into `batch` (`id`, `name`, `value`)
+values
+    (1, 'Tanda 1', 1800),
+    (2, 'Tanda 2', 2500),
+    (3, 'Tanda 3', 2500),
+    (4, 'Preventa', 1500),
+    (5, 'Puerta (transferencia)', 3500),
+    (6, 'Puerta (efectivo)', 3500),
+    (7, 'Comprobante', 0),
+    (8, 'Staff', 0),
+    (9, 'Free', 0);
+
 -- BASE DATA
 
 insert into `person` (`id`, `name`, `contact`)
