@@ -139,7 +139,7 @@ values
     (1, 'Santiago Taschetta', 'tsch.tt'),
     (2, 'Ivan Klecker', 'kleck.er'),
     (3, 'Facundo Scenna', '_fakito'),
-    (4, 'Juma', '_clipperstealer');
+    (4, 'Juan Manuel Grasso', '_clipperstealer');
 
 
 insert into `user` (`id`, `fk_person`, `username`, `password`)
