@@ -80,6 +80,7 @@ create table `event` (
 
 create table `batch` (
     `id` integer unsigned not null auto_increment,
+    `active` tinyint(1) not null,
     `name` varchar(255) not null,
     `value` double not null,
     `created_at` datetime not null default current_timestamp,
@@ -120,15 +121,15 @@ values
     (2, 'blocked'),
     (3, 'used');
 
-insert into `batch` (`id`, `name`, `value`)
+insert into `batch` (`id`, `name`, `value`, `active`)
 values
-    (1, 'Tanda 1', 1800),
-    (2, 'Tanda 2', 2500),
-    (3, 'Tanda 3', 2500),
-    (4, 'Preventa', 1500),
-    (5, 'Puerta (transferencia)', 3500),
-    (6, 'Puerta (efectivo)', 3500),
-    (7, 'Comprobante', 0),
+    (1, 'Tanda 1', 1800, 0),
+    (2, 'Tanda 2', 2500, 0),
+    (3, 'Tanda 3', 2500, 0),
+    (4, 'Preventa', 1500, 0),
+    (5, 'Puerta (transferencia)', 3500, 1),
+    (6, 'Puerta (efectivo)', 3500, 1),
+    (7, 'Comprobante', 0, 1),
     (8, 'Staff', 0),
     (9, 'Free', 0);
 
