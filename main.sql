@@ -130,8 +130,8 @@ values
     (5, 'Puerta (transferencia)', 3500, 1),
     (6, 'Puerta (efectivo)', 3500, 1),
     (7, 'Comprobante', 0, 1),
-    (8, 'Staff', 0),
-    (9, 'Free', 0);
+    (8, 'Staff', 0, 0),
+    (9, 'Free', 0, 0);
 
 -- BASE DATA
 
